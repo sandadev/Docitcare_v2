@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/SuperUser/Views/Shared/_SuperUserLayout.cshtml";
+}
+
+
+                <div class="col-lg-9 col-md-9">
+                    <h4 class="card-title text-dark">
+                        <a href="#">
+                            <svg width="40" height="40">
+                                <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554 c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587 c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"
+                                      style="fill: rgb(0, 0, 0);"></path>
+                            </svg>
+                        </a> Entities
+                    </h4>
+                    <div class="table-responsive">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">@*@*@</span>
+                            </div>
+                            <input type="text" class="form-control pl-2" placeholder="Search ...">
+                        </div>
+                        <table class="table small background" id="tblEntity">
+                            <thead class="tableHead">
+                                <tr>
+                                    <th scope="col">Entity Id</th>
+                                    <th scope="col">Hospital Name</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">Contact Person</th>
+                                    <th scope="col">Mobile Number</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Test</td>
+                                    <td>Hyderabad</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Test</td>
+                                    <td>Hyderabad</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Test</td>
+                                    <td>Hyderabad</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        @*<div class="row mt-5 col-12 d-flex justify-content-center">
+                            <nav aria-label="paginationNav">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">
+                                            2 <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>*@
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="card mb-3">
+                        <div class="card-body p-3 text-center">
+                            <p class="text-muted text-center fs-14 my-3">
+                                Add your Branch details to
+                                get<br /> a better analysis
+                            </p>
+                            <button type="button" class="btn btn-success waves-effect waves-light modal-btn"
+                                    onclick="window.location.href='add-branch.html'">
+                                Add
+                                Branch
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="" class="help_link float-right" data-toggle="modal"
+                           data-target="#needHelp">Need Help ?</a>
+                    </div>
+                </div>
+     
+
+  
+                <script>
+                     var GeteEntityList = '@Url.Action("GetEntityList", "Entity")';
+                </script>

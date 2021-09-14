@@ -1,0 +1,167 @@
+﻿@model Docitcare_v2.Core.Domain.UltraUsers
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Hospitals | Login</title>
+    <meta content="Hospital Dashboard" name="description" />
+    <meta content="Hospitals" name="author" />
+    <link rel="shortcut icon" href="~/Content/Theme/assets/images/favicon.ico">
+
+
+    <link href="~/Content/Theme/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Theme/assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/Theme/assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/Content/Theme/assets/css/input-material.css">
+    <link href="~/Content/Theme/assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+        <div class="lblock d-flex justify-content-center align-items-center">
+            <img src="~/Content/Theme/assets/images/login-left.svg" alt="" width="400" />
+        </div>
+        <div class="rblock">
+            <div class="vh-100 d-flex flex-row align-items-center justify-content-center">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-10 col-lg-10 col-12 offset-md-1 offset-lg-1">
+                            <h4 class="card-title text-dark my-5">Welcome to Hospitals</h4>
+                            <div class="loginForm">
+
+                                @using (Html.BeginForm())
+                                {
+                                    @Html.AntiForgeryToken()
+                                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                    <div class="row">
+                                        <div class="col-lg-3 col-3 form-group">
+                                            <label for="select-code" class="col-form-label">Select Code :</label>
+                                            <select class="form-control" aria-label="Default select example">
+                                                @*<option value="+61">+61 (Australia)</option>
+                        <option value="+43">+43 (Austria)</option>
+                        <option value="+973">+973 (Bahrain)</option>
+                        <option value="+32">+32 (Belgium)</option>
+                        <option value="+975">+975 (Bhutan)</option>
+                        <option value="+55">+55 (Brazil)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+45">+45 (Denmark)</option>
+                        <option value="+679">+679 (Fiji)</option>
+                        <option value="+358">+358 (Finland)</option>
+                        <option value="+33">+33 (France)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+30">+30 (Greece)</option>
+                        <option value="+852">+852 (Hong Kong)</option>*@
+                                                <option value="+91">+91 (India)</option>
+                                                @*<option value="+62">+62 (Indonesia)</option>
+                        <option value="+353">+353 (Ireland)</option>
+                        <option value="+972">+972 (Israel)</option>
+                        <option value="+39">+39 (Italy)</option>
+                        <option value="+81">+81 (Japan)</option>
+                        <option value="+965">+965 (Kuwait)</option>
+                        <option value="+60">+60 (Malaysia)</option>
+                        <option value="+960">+960 (Maldives)</option>
+                        <option value="+230">+230 (Mauritius)</option>
+                        <option value="+95">+95 (Myanmar)</option>
+                        <option value="+977">+977 (Nepal)</option>
+                        <option value="+31">+31 (Netherlands)</option>
+                        <option value="+64">+64 (New Zealand)</option>
+                        <option value="+234">+234 (Nigeria)</option>
+                        <option value="+47">+47 (Norway)</option>
+                        <option value="+968">+968 (Oman)</option>
+                        <option value="+63">+63 (Philippines)</option>
+                        <option value="+48">+48 (Poland)</option>
+                        <option value="+351">+351 (Portugal)</option>
+                        <option value="+974">+974 (Qatar)</option>
+                        <option value="+7">+7 (Russia)</option>
+                        <option value="+966">+966 (Saudi Arabia)</option>
+                        <option value="+65">+65 (Singapore)</option>
+                        <option value="+27">+27 (South Africa)</option>
+                        <option value="+82">+82 (South Korea)</option>
+                        <option value="+34">+34 (Spain)</option>
+                        <option value="+46">+46 (Sweden)</option>
+                        <option value="+41">+41 (Switzerland)</option>
+                        <option value="+886">+886 (Taiwan)</option>
+                        <option value="+66">+66 (Thailand)</option>
+                        <option value="+90">+90 (Turkey)</option>
+                        <option value="+380">+380 (Ukraine)</option>
+                        <option value="+971">+971 (United Arab Emirates)</option>
+                        <option value="+44">+44 (United Kingdom)</option>
+                        <option value="+1">+1 (USA)</option>
+                        <option value="+84">+84 (Vietnam)</option>
+                        <option value="+260">+260 (Zambia)</option>*@
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-9 col-9 form-group">
+                                            <label for="mbl-number" class="col-form-label">Enter your mobile number</label>
+                                            @*<input type="text" class="form-control" id="txtMobileNumber">*@
+                                            @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @class = "form-control", @placeholder = "Mobile Number" } })
+                                            @Html.ValidationMessageFor(model => model.MobileNumber, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-lg-12 form-group">
+                                            <label for="mbl-number" class="col-form-label">Password</label>
+                                            @*<input type="text" class="form-control" id="txtPassword">*@
+                                            @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "Password" } })
+                                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                        </div>
+                                        <div class="col-lg-12 col-12  form-group">
+                                            @*<button type="submit" class="btn btn-outline-primary btn-block"><i class="feather icon-unlock"></i> Login</button>*@
+
+                                            <button type="submit" class="btn btn-success waves-effect waves-light modal-btn text-white"
+                                                    id="btnLogin">
+                                                Password
+                                                login
+                                            </button><span class="ml-3 mr-3 text-dark">Or</span>
+                                            <a class="btn btn-info waves-effect waves-light large-btn text-white"
+                                               href="">
+                                                OTP
+                                                login
+                                            </a>
+                                        </div>
+                                        </div>
+                                        }
+                                        @*</form>*@
+                                    </div>
+                                    <div class="my-5">
+                                        <p class="d-flex blueText align-content-center">
+                                            <a href="#" class="mr-2">
+                                                <svg width="25" height="30">
+                                                    <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554 c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587 c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"
+                                                          style="fill: rgb(0, 0, 0);"></path>
+                                                </svg>
+                                            </a>
+                                            <span>Switch To Patient Login</span>
+                                        </p>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- jQuery  -->
+    <script src="~/Content/Theme/assets/js/jquery.min.js"></script>
+    <script src="~/Content/Theme/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Content/Theme/assets/js/metismenu.min.js"></script>
+    <script src="~/Content/Theme/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/Content/Theme/assets/js/waves.min.js"></script>
+
+    <!--Morris Chart-->
+    <script src="~/Content/Theme/assets/js/bootstrap-inputmask.min.js"></script>
+
+    <!-- App js -->
+    <script src="~/Content/Theme/assets/js/app.js"></script>
+    <script>$("a.my-tool-tip").tooltip();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="~/DocitScripts/Login.js"></script>
+    @*<script>
+        var LoginUrl = '@Url.Action("Login", "Account")';
+    </script>*@
+
+</body>

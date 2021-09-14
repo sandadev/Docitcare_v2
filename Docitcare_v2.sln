@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docitcare_v2", "Docitcare_v2\Docitcare_v2.csproj", "{30283C8D-BB07-467C-92D6-A2D6E84F927C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30283C8D-BB07-467C-92D6-A2D6E84F927C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30283C8D-BB07-467C-92D6-A2D6E84F927C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30283C8D-BB07-467C-92D6-A2D6E84F927C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30283C8D-BB07-467C-92D6-A2D6E84F927C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D257436-A55E-44CD-83A4-057FCB02D91A}
+	EndGlobalSection
+EndGlobal
