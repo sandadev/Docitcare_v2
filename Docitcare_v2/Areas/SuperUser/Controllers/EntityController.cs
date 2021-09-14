@@ -16,7 +16,6 @@ namespace Docitcare_v2.Areas.SuperUser.Controllers
             _unitOfWork = unitOfWork;
         }
         // GET: SuperUser/Entity
-        //test the test branch
         public ActionResult Index()
         {
            // _unitOfWork.Entities.GetAll();
