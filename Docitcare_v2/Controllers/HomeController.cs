@@ -12,7 +12,7 @@ namespace Docitcare_v2.Controllers
         {
             return View();
         }
-
+        //Nanda code
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
